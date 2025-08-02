@@ -8,6 +8,9 @@ import Category from "./pages/Category";
 import Shop from "./pages/Shop";
 import Sale from "./pages/Sale";
 import ProductDetails from "./pages/ProductDetails";
+import UserSignup from "./pages/UserSignup";
+import Login from "./pages/Login";
+import SellerSignup from "./pages/SellerSignup";
 
 function App() {
 
@@ -24,6 +27,9 @@ function App() {
       <Route path="/shop" element={<Shop />} />
       <Route path="/sale" element={<Sale />} />
       <Route path="/productDetails/:id" element={<ProductDetails />} />
+      <Route path="/userSignup" element={<UserSignup />} />
+      <Route path="/sellerSignup" element={<SellerSignup/>} />
+      <Route path="/login" element={<Login />} />
     </Routes>
     </BrowserRouter>
     </>

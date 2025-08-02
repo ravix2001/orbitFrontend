@@ -14,7 +14,7 @@ const Home = () => {
 
   async function fetchProducts() {
     const response = await axios.get(
-      "http://localhost:8080/api/product/category/7"   // we will replace paginated with featuredProducts later
+      "http://localhost:8080/api/product/category/1"
     );
     console.log(response.data);
     if (response.status == 200) {

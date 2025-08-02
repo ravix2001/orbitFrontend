@@ -78,7 +78,7 @@ const Navbar = () => {
             <i className="fas fa-shopping-cart text-xl" />
           </a>
           <a
-            href="#"
+            href="/login"
             className="hover:text-rose-400 transition-all duration-300 hover:-translate-y-1"
           >
             <i className="fas fa-user text-xl" />
