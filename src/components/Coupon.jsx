@@ -23,7 +23,7 @@ const Coupon = () => {
             placeholder="Enter your email"
             className="px-5 py-3 border border-gray-300 rounded-l-full w-80 focus:outline-none focus:border-primary transition-colors duration-300"
           />
-          <button className="bg-rose-400 text-white px-6 py-3 rounded-r-full font-medium hover:bg-rose-500 transition-colors duration-300">
+          <button className="bg-rose-500 text-white px-6 py-3 rounded-r-full font-medium hover:bg-rose-600 transition-colors duration-300">
             EMAIL ME
           </button>
         </div>

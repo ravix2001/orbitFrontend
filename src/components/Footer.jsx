@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">ORBIT</h3>
             <p className="text-gray-400">
-              Your one-stop shop for the latest fashion trends and styles.
+              Always in Your Orbit, <br /> Always Within Reach.
             </p>
           </div>
           <div>

@@ -13,8 +13,6 @@ const Products = () => {
       "http://localhost:8080/api/product/paginated" // we will replace paginated with featuredProducts later
     );
     console.log(response.data);
-    console.log(response.data.content[0].name); // remove this later
-    console.log(response.data.content[0].images[0]); // remove this later
     if (response.status == 200) {
       setProducts(response.data.content);
     } else {
@@ -42,11 +40,12 @@ const Products = () => {
             return (
               <Product
                 key={product.id}
+                id={product.id}
                 productId={product.productId}
                 productName={product.name}
                 brand={product.brand}
                 description={product.description}
-                imageUrl={product.images[0]}
+                images={product.images}
                 quantity={product.quantity}
                 color={product.color}
                 size={product.size}

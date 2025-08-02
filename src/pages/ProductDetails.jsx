@@ -51,18 +51,23 @@ const ProductDetails = () => {
           <div className="flex flex-wrap -mx-4">
             {/* Product Images */}
             <div className="w-full md:w-1/2 px-4 mb-8">
-              <img
-                src={mainImage}
-                alt="Product"
-                className="w-full h-auto rounded-lg shadow-md mb-4"
-              />
+              {/* Main Image */}
+              <div className="flex justify-center">
+                <img
+                  src={mainImage}
+                  alt="Product"
+                  className="w-124 h-100 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl object-cover rounded-lg shadow-md mb-4"
+                />
+              </div>
+
+              {/* Thumbnails */}
               <div className="flex gap-4 py-4 justify-center overflow-x-auto">
                 {product.images?.map((img, index) => (
                   <img
                     key={index}
                     src={img}
                     alt={`Thumbnail ${index + 1}`}
-                    className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
+                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-cover rounded-md cursor-pointer opacity-70 hover:opacity-100 transition duration-300"
                     onClick={() => changeImage(img)}
                   />
                 ))}
@@ -71,7 +76,8 @@ const ProductDetails = () => {
             {/* Product Details */}
             <div className="w-full md:w-1/2 px-4">
               <h2 className="text-3xl font-bold mb-2">{product.name}</h2>
-              <p className="text-gray-600 mb-4">{product.productId}</p>
+              {/* <p className="text-gray-600 mb-4">{product.productId}</p> */}
+              <p className="text-gray-700 mb-4">{product.description}</p>
               <div className="mb-4">
                 <span className="text-2xl font-bold mr-2">
                   Rs.{product.sellingPrice}
@@ -143,9 +149,6 @@ const ProductDetails = () => {
                 </svg>
                 <span className="ml-2 text-gray-600">4.5 (120 reviews)</span>
               </div>
-              <p className="text-gray-700 mb-6">
-                {product.description}
-              </p>
               <div className="mb-6">
                 <h3 className="text-lg font-semibold mb-2">Color:</h3>
                 <div className="flex space-x-2">
@@ -209,7 +212,7 @@ const ProductDetails = () => {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Key Features:</h3>
                 <ul className="list-disc list-inside text-gray-700">
-                    {/* define it later */}
+                  {/* define it later */}
                   <li>Industry-leading noise cancellation</li>
                   <li>30-hour battery life</li>
                   <li>Touch sensor controls</li>

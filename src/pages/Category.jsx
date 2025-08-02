@@ -60,9 +60,9 @@ const Category = () => {
                 key={category.id}
                 className={`px-4 py-2 rounded-full border ${
                   selectedCategoryId === category.id
-                    ? "bg-primary text-white"
-                    : "bg-white text-primary border-primary"
-                } hover:bg-primary hover:text-white transition`}
+                    ? "bg-rose-500 text-white"
+                    : ""
+                } hover:bg-rose-500 hover:text-white transition`}
                 onClick={() => setSelectedCategoryId(category.id)}
               >
                 {category.name}
@@ -73,7 +73,7 @@ const Category = () => {
 
         <div className="featured-section text-center">
           <div className="section-header flex justify-between items-center mb-10">
-            <h2 className="text-2xl font-semibold">
+            <h2 className="text-xl font-semibold">
               {selectedCategoryId
                 ? `Products in ${categories.find((c) => c.id === selectedCategoryId)?.name}`
                 : "Select a category to view products"}

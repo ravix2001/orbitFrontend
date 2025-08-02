@@ -14,11 +14,11 @@ const Home = () => {
 
   async function fetchProducts() {
     const response = await axios.get(
-      "http://localhost:8080/api/product/paginated"   // we will replace paginated with featuredProducts later
+      "http://localhost:8080/api/product/category/7"   // we will replace paginated with featuredProducts later
     );
     console.log(response.data);
     if (response.status == 200) {
-      setProducts(response.data.content);
+      setProducts(response.data);
     } else {
       alert("Failed to fetch products");
     }
