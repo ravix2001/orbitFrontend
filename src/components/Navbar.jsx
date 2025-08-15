@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center px-5 py-4 bg-white text-gray-900 dark:bg-gray-800 dark:text-white shadow-md sticky top-0 z-50 relative">
+      <nav className="flex justify-between items-center px-5 py-4 bg-white text-gray-900 dark:bg-gray-800 dark:text-white shadow-md sticky top-0 z-50">
         {/* Left: Brand */}
         <div className="text-2xl font-bold z-10">ORBIT</div>
 
